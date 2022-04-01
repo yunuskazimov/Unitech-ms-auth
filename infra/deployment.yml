@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-unitech-auth-deployment
+  labels:
+    app: ms-unitech-auth
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms-unitech-auth
+  template:
+    metadata:
+      labels:
+        app: ms-unitech-auth
+    spec:
+      containers:
+        - name: ms-unitech-auth
+          image: yunuskazimov94/unitech-auth
+          ports:
+            - containerPort: 8041
+              protocol: TCP
