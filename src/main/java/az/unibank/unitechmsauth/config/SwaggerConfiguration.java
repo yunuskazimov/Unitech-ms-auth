@@ -28,7 +28,7 @@ public class SwaggerConfiguration extends WebMvcConfigurationSupport {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("MSAuth Api")
-                .description("MSAuth Api For Farid")
+                .description("MSAuth Api For Unitech")
                 .build();
     }
 
